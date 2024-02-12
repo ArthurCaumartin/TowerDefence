@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting.ReorderableList;
 using UnityEngine;
 
-public class EnnemyBehavior : MonoBehaviour
+public class EnemyBehavior : MonoBehaviour
 {
     [SerializeField] private float _speed;
     [SerializeField] private List<Vector3> _positionList;
@@ -13,7 +13,7 @@ public class EnnemyBehavior : MonoBehaviour
 
     void Start()
     {
-        _offSet = Random.insideUnitCircle * .3f;
+        _offSet = Random.insideUnitSphere * .3f;
 
         _positionList.Clear();
         foreach (var item in LevelManager.instance.PositionList)
@@ -24,7 +24,7 @@ public class EnnemyBehavior : MonoBehaviour
     {
         if (_movementIndex + 1 >= _positionList.Count)
         {
-            EnnemyManager.instance.RemoveEnnemy(this);
+            EnemyManager.instance.RemoveEnnemy(this);
             Destroy(gameObject);
             return;
         }
