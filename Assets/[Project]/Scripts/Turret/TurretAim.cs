@@ -12,13 +12,18 @@ enum AimMode
 
 public class TurretAim : MonoBehaviour
 {
-    [Header("Reference :")]
-    [SerializeField] private TurretShooter _turretShooter;
     [SerializeField] private Transform _spriteTransform;
-    [Header("Parametre :")]
     [SerializeField] private AimMode _aimMode;
-    [SerializeField] private float _range = 5;
-    [SerializeField] private GameObject _enemyTarget;
+
+    private GameObject _enemyTarget;
+    private TurretShooter _turretShooter;
+    private TurretStat _stat;
+
+    void Start()
+    {
+        _stat = GetComponent<TurretStat>();
+        _turretShooter = GetComponent<TurretShooter>();
+    }
 
     private GameObject UpdateTarget()
     {
@@ -26,11 +31,11 @@ public class TurretAim : MonoBehaviour
         switch (_aimMode)
         {
             case AimMode.First :
-                enemyToReturn = EnemyManager.instance.GetFirstEnemyInRange(transform.position, _range);
+                enemyToReturn = EnemyManager.instance.GetFirstEnemyInRange(transform.position, _stat.range);
             break;
 
             case AimMode.Random :
-                enemyToReturn = EnemyManager.instance.GetRandomEnemyInRange(transform.position, _range);
+                enemyToReturn = EnemyManager.instance.GetRandomEnemyInRange(transform.position, _stat.range);
             break;
         }
 
@@ -61,9 +66,17 @@ public class TurretAim : MonoBehaviour
         // _cannonTransform.right = Vector3.Slerp(_cannonTransform.right, ennemyDirection, Time.deltaTime);
     }
 
+    public Vector2 GetTurretOrientation()
+    {
+        return _spriteTransform.up;
+    }
+
     void OnDrawGizmos()
     {
+        if(!_stat)
+            _stat = GetComponent<TurretStat>();
+            
         Gizmos.color = new Color(1, 0, 0, .2f);
-        Gizmos.DrawSphere(transform.position, _range);
+        Gizmos.DrawSphere(transform.position, _stat.range);
     }
 }

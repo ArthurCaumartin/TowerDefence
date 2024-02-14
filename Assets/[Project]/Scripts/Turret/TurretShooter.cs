@@ -5,14 +5,18 @@ using UnityEngine;
 public class TurretShooter : MonoBehaviour
 {
     [SerializeField] private GameObject _bulletPrefab;
-    [SerializeField] private float _shootPerSecond;
-    [SerializeField] private float _bulletDamage;
-    [SerializeField] private float _bulletSpeed;
-    [Space]
-    [SerializeField] private EnemyLife _target;
+    private EnemyLife _target;
     private EnemyLife _lastFrameTarget;
     public EnemyLife Target { set => _target = value; }
     private float _shootTimer;
+    private TurretStat _stat;
+    private TurretAim _turretAim;
+
+    void Start()
+    {
+        _stat = GetComponent<TurretStat>();
+        _turretAim = GetComponent<TurretAim>();
+    }
 
     void Update()
     {
@@ -22,13 +26,16 @@ public class TurretShooter : MonoBehaviour
         if(_target != _lastFrameTarget)
             _shootTimer = 0;
 
-        _shootTimer += Time.deltaTime * _shootPerSecond;
+        _shootTimer += Time.deltaTime * _stat.attackPerSecond;
         if (_shootTimer >= 1)
         {
             _shootTimer = 0;
-            Bullet newbullet = Instantiate(_bulletPrefab, transform.position, Quaternion.identity)
+            Vector2 bulletSpawn = _turretAim.GetTurretOrientation();
+            bulletSpawn = transform.TransformPoint(bulletSpawn * .5f);
+
+            Bullet newbullet = Instantiate(_bulletPrefab, bulletSpawn, Quaternion.identity)
                                .GetComponent<Bullet>();
-            newbullet.Initialize(_target, _bulletDamage, _bulletSpeed);
+            newbullet.Initialize(_target, _stat.damage, _stat.bulletSpeed);
         }
 
         _lastFrameTarget = _target;
