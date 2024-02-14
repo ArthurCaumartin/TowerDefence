@@ -16,7 +16,7 @@ public class TurretShooter : MonoBehaviour
 
     void Update()
     {
-        if(!_target)
+        if(!_target) //TODO faire un check de la distance pour clear la target
             return;
 
         if(_target != _lastFrameTarget)

@@ -30,7 +30,7 @@ public class TurretAim : MonoBehaviour
             break;
 
             case AimMode.Random :
-                enemyToReturn = null;
+                enemyToReturn = EnemyManager.instance.GetRandomEnemyInRange(transform.position, _attackRange);
             break;
         }
 
@@ -39,7 +39,8 @@ public class TurretAim : MonoBehaviour
 
     void Update()
     {
-        _enemyTarget = UpdateTarget();
+        if(!_enemyTarget)
+            _enemyTarget = UpdateTarget();
 
 
         if (!_enemyTarget)

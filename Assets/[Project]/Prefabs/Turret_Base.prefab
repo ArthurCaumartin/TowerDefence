@@ -48,6 +48,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _turretShooter: {fileID: 5538043691669903632}
   _spriteTransform: {fileID: 7863982615885735275}
+  _aimMode: 0
   _attackRange: 5
   _enemyTarget: {fileID: 0}
 --- !u!114 &5538043691669903632
@@ -66,9 +67,8 @@ MonoBehaviour:
     type: 3}
   _shootPerSecond: 2
   _bulletDamage: 3
-  _bulletSpeed: 5
+  _bulletSpeed: 10
   _target: {fileID: 0}
-  _lastFrameTarget: {fileID: 0}
 --- !u!1 &3452607729628489974
 GameObject:
   m_ObjectHideFlags: 0
