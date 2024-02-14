@@ -48,8 +48,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _turretShooter: {fileID: 5538043691669903632}
   _spriteTransform: {fileID: 7863982615885735275}
-  _aimMode: 0
-  _attackRange: 5
+  _aimMode: 1
+  _range: 5
   _enemyTarget: {fileID: 0}
 --- !u!114 &5538043691669903632
 MonoBehaviour:
@@ -65,7 +65,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _bulletPrefab: {fileID: 8599362782793962602, guid: 2c00e79b324c3a04f88ab32f41ba3cf6,
     type: 3}
-  _shootPerSecond: 2
+  _shootPerSecond: 5
   _bulletDamage: 3
   _bulletSpeed: 10
   _target: {fileID: 0}

@@ -17,7 +17,7 @@ public class TurretAim : MonoBehaviour
     [SerializeField] private Transform _spriteTransform;
     [Header("Parametre :")]
     [SerializeField] private AimMode _aimMode;
-    [SerializeField] private float _attackRange = 5;
+    [SerializeField] private float _range = 5;
     [SerializeField] private GameObject _enemyTarget;
 
     private GameObject UpdateTarget()
@@ -26,11 +26,11 @@ public class TurretAim : MonoBehaviour
         switch (_aimMode)
         {
             case AimMode.First :
-                enemyToReturn = EnemyManager.instance.GetFirstEnemyInRange(transform.position, _attackRange);
+                enemyToReturn = EnemyManager.instance.GetFirstEnemyInRange(transform.position, _range);
             break;
 
             case AimMode.Random :
-                enemyToReturn = EnemyManager.instance.GetRandomEnemyInRange(transform.position, _attackRange);
+                enemyToReturn = EnemyManager.instance.GetRandomEnemyInRange(transform.position, _range);
             break;
         }
 
@@ -64,6 +64,6 @@ public class TurretAim : MonoBehaviour
     void OnDrawGizmos()
     {
         Gizmos.color = new Color(1, 0, 0, .2f);
-        Gizmos.DrawSphere(transform.position, _attackRange);
+        Gizmos.DrawSphere(transform.position, _range);
     }
 }
