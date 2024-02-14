@@ -6,6 +6,7 @@ using UnityEngine;
 public class LevelManager : MonoBehaviour
 {
     public static LevelManager instance;
+    [SerializeField] private float _debugGizmoThicknes = 1f;
     [SerializeField] private List<Transform> _positionList;
     public List<Transform> PositionList { get => _positionList; }
 
@@ -35,7 +36,8 @@ public class LevelManager : MonoBehaviour
             {
                 Gizmos.DrawLine(_positionList[i].position, _positionList[i + 1].position);
                 for (float y = 0; y < 1 && !Application.isPlaying; y += .01f)
-                    Gizmos.DrawSphere(Vector3.Lerp(_positionList[i].position, _positionList[i + 1].position, y), .2f);
+                    Gizmos.DrawSphere(Vector3.Lerp(_positionList[i].position, _positionList[i + 1].position, y)
+                                    , _debugGizmoThicknes * .1f);
             }
         }
     }

@@ -7,7 +7,7 @@ public class EnemyManager : MonoBehaviour
     public static EnemyManager instance;
     [SerializeField] private GameObject _ennemyPrefab;
     [SerializeField] private float _spawnPerSecond;
-    [SerializeField] private List<EnemyBehavior> _ennemyList;
+    [SerializeField] private List<GameObject> _ennemyList;
     private float _timer;
 
     void Awake()
@@ -20,7 +20,7 @@ public class EnemyManager : MonoBehaviour
     {
         GameObject newEnnemy = Instantiate(_ennemyPrefab, LevelManager.instance.PositionList[0].position, Quaternion.identity);
         EnemyBehavior newBehavior = newEnnemy.GetComponent<EnemyBehavior>();
-        _ennemyList.Add(newBehavior);
+        _ennemyList.Add(newEnnemy);
     }
 
     void Update()
@@ -33,7 +33,7 @@ public class EnemyManager : MonoBehaviour
         }
     }
 
-    public EnemyBehavior GetFirstEnemyInRange(Vector3 turretPosition, float turretRange)
+    public GameObject GetFirstEnemyInRange(Vector3 turretPosition, float turretRange)
     {
         for (int i = 0; i < _ennemyList.Count; i++)
         {
@@ -46,9 +46,20 @@ public class EnemyManager : MonoBehaviour
         return null;
     }
 
-    public void RemoveEnnemy(EnemyBehavior toRemove)
+    public GameObject GetRandomEnemyInRange(Vector3 turretPosition, float turretRange)
+    {
+        while (true)
+        {
+            int index = Random.Range(0, _ennemyList.Count);
+            if(Vector2.Distance(_ennemyList[index].transform.position, turretPosition) < turretRange)
+                return _ennemyList[index];
+        }
+    }
+
+    public void RemoveEnnemy(GameObject toRemove)
     {
         if(_ennemyList.Contains(toRemove))
             _ennemyList.Remove(toRemove);
+        Destroy(toRemove);
     }
 }

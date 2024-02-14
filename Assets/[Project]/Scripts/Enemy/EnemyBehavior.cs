@@ -24,8 +24,7 @@ public class EnemyBehavior : MonoBehaviour
     {
         if (_movementIndex + 1 >= _positionList.Count)
         {
-            EnemyManager.instance.RemoveEnnemy(this);
-            Destroy(gameObject);
+            EnemyManager.instance.RemoveEnnemy(gameObject);
             return;
         }
 
