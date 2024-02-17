@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8a88b81230201c84aa7a9ef38f664d5f
+guid: a07e31827d9b6e54d8e8ba5b62840e64
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -134,62 +134,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: tower_base_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 450
-        height: 450
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7f3f6bfee0219bf4d8619f612c99dbf8
-      internalID: 273803038
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tower_base_1
-      rect:
-        serializedVersion: 2
-        x: 468
-        y: 85
-        width: 200
-        height: 280
-      alignment: 9
-      pivot: {x: 0.5, y: 0.35714287}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c3065c3f8c37a854cb02be4568e46d2c
-      internalID: 1852276270
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 09e8b812f76a0154aba2054af95fd842
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      tower_base_0: 273803038
-      tower_base_1: 1852276270
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

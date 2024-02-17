@@ -7,6 +7,7 @@ public class LevelManager : MonoBehaviour
 {
     public static LevelManager instance;
     [SerializeField] private float _debugGizmoThicknes = 1f;
+    [SerializeField] private bool _debug;
     [SerializeField] private List<Transform> _positionList;
     public List<Transform> PositionList { get => _positionList; }
 
@@ -26,7 +27,7 @@ public class LevelManager : MonoBehaviour
 
     void OnDrawGizmos()
     {
-        if (_positionList.Count < 1)
+        if (_positionList.Count < 1 || !_debug)
             return;
 
         Gizmos.color = Color.red;

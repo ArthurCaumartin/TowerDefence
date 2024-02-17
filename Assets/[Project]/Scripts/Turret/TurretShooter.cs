@@ -5,6 +5,7 @@ using UnityEngine;
 public class TurretShooter : MonoBehaviour
 {
     [SerializeField] private GameObject _bulletPrefab;
+    [SerializeField] private bool _debug;
     private EnemyLife _target;
     private EnemyLife _lastFrameTarget;
     public EnemyLife Target { set => _target = value; }
@@ -26,7 +27,7 @@ public class TurretShooter : MonoBehaviour
         if(_target != _lastFrameTarget)
             _shootTimer = 0;
 
-        _shootTimer += Time.deltaTime * _stat.attackPerSecond;
+        _shootTimer += Time.deltaTime * _stat._baseAttackPerSecond;
         if (_shootTimer >= 1)
         {
             _shootTimer = 0;
@@ -35,7 +36,7 @@ public class TurretShooter : MonoBehaviour
 
             Bullet newbullet = Instantiate(_bulletPrefab, bulletSpawn, Quaternion.identity)
                                .GetComponent<Bullet>();
-            newbullet.Initialize(_target, _stat.damage, _stat.bulletSpeed);
+            newbullet.Initialize(_target, _stat._baseDamage, _stat._baseBulletSpeed);
         }
 
         _lastFrameTarget = _target;
@@ -43,7 +44,7 @@ public class TurretShooter : MonoBehaviour
 
     void OnDrawGizmos()
     {
-        if (!_target)
+        if (!_target || !_debug)
             return;
 
         Gizmos.color = Color.green;

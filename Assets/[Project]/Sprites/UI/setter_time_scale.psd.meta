@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8a88b81230201c84aa7a9ef38f664d5f
+guid: 4e5ded9ab3edd3843b01b5446c47baef
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 500
+  spritePixelsToUnits: 150
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -136,43 +136,43 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: tower_base_0
+      name: setter_time_scale_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 278
         y: 0
-        width: 450
-        height: 450
+        width: 222
+        height: 500
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7f3f6bfee0219bf4d8619f612c99dbf8
-      internalID: 273803038
+      spriteID: a2adeba7be8d35940a26f6317be0079e
+      internalID: -1103726042
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tower_base_1
+      name: setter_time_scale_1
       rect:
         serializedVersion: 2
-        x: 468
-        y: 85
-        width: 200
-        height: 280
-      alignment: 9
-      pivot: {x: 0.5, y: 0.35714287}
+        x: 35
+        y: 286
+        width: 207
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c3065c3f8c37a854cb02be4568e46d2c
-      internalID: 1852276270
+      spriteID: 5522480d48c54c74182a505ce8ebf08b
+      internalID: 1411258526
       vertices: []
       indices: 
       edges: []
@@ -180,7 +180,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 09e8b812f76a0154aba2054af95fd842
+    spriteID: cf745d20494c46b42ad598e8713d608e
     internalID: 0
     vertices: []
     indices: 
@@ -188,10 +188,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      tower_base_0: 273803038
-      tower_base_1: 1852276270
+      setter_time_scale_0: -1103726042
+      setter_time_scale_1: 1411258526
+      setter_time_scale_2: 553062397
+      setter_time_scale_3: -1019883931
   mipmapLimitGroupName: 
-  pSDRemoveMatte: 0
+  pSDRemoveMatte: 1
   userData: 
   assetBundleName: 
   assetBundleVariant: 

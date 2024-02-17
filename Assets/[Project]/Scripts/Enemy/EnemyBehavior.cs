@@ -6,14 +6,14 @@ using UnityEngine;
 public class EnemyBehavior : MonoBehaviour
 {
     [SerializeField] private float _speed;
-    [SerializeField] private List<Vector3> _positionList;
-    [SerializeField] private int _movementIndex;
+    private List<Vector3> _positionList = new List<Vector3>();
+    private int _movementIndex;
     private float time;
     private Vector3 _offSet;
 
     void Start()
     {
-        _offSet = Random.insideUnitSphere * .3f;
+        _offSet = Random.insideUnitCircle * .2f;
 
         _positionList.Clear();
         foreach (var item in LevelManager.instance.PositionList)
