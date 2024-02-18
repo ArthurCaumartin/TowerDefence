@@ -31,13 +31,13 @@ public class TurretAim : MonoBehaviour
         GameObject enemyToReturn = null;
         switch (_aimMode)
         {
-            case AimMode.First :
+            case AimMode.First:
                 enemyToReturn = EnemyManager.instance.GetFirstEnemyInRange(transform.position, _stat._baseRange);
-            break;
+                break;
 
-            case AimMode.Random :
+            case AimMode.Random:
                 enemyToReturn = EnemyManager.instance.GetRandomEnemyInRange(transform.position, _stat._baseRange);
-            break;
+                break;
         }
 
         return enemyToReturn;
@@ -45,7 +45,7 @@ public class TurretAim : MonoBehaviour
 
     void Update()
     {
-        if(!_enemyTarget)
+        if (!_enemyTarget)
             _enemyTarget = UpdateTarget();
 
 
@@ -55,16 +55,17 @@ public class TurretAim : MonoBehaviour
             return;
         }
 
+        if (Vector2.Distance(transform.position, _enemyTarget.transform.position) > _stat._baseRange)
+        {
+            _enemyTarget = null;
+            return;
+        }
+
         Vector3 ennemyDirection = (_enemyTarget.transform.position - transform.position).normalized;
 
+        //TODO Rotate tower with angle per seconde
         _spriteTransform.up = ennemyDirection;
         _turretShooter.Target = _enemyTarget.GetComponent<EnemyLife>();
-
-        // if (Vector2.Dot(_spriteUp, ennemyDirection) > .95f)
-        // else
-        //     _turretShooter.Target = null;
-
-        // _cannonTransform.right = Vector3.Slerp(_cannonTransform.right, ennemyDirection, Time.deltaTime);
     }
 
     public Vector2 GetTurretOrientation()
@@ -74,12 +75,12 @@ public class TurretAim : MonoBehaviour
 
     void OnDrawGizmos()
     {
-        if(!_debug)
+        if (!_debug)
             return;
-            
-        if(!_stat)
+
+        if (!_stat)
             _stat = GetComponent<TurretStat>();
-            
+
         Gizmos.color = new Color(1, 0, 0, .2f);
         Gizmos.DrawSphere(transform.position, _stat._baseRange);
     }

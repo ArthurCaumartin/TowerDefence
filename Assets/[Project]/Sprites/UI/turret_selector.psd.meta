@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 4e5ded9ab3edd3843b01b5446c47baef
+guid: 53005c16ff574c14fb2b1b3eb934db91
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 150
+  spritePixelsToUnits: 500
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -136,13 +136,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: setter_time_scale_0
+      name: turret_selector_0
       rect:
         serializedVersion: 2
         x: 23
-        y: 5
-        width: 475
-        height: 463
+        y: 24
+        width: 459
+        height: 465
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,20 +150,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a2adeba7be8d35940a26f6317be0079e
-      internalID: -1103726042
+      spriteID: 7263a5efc58813346aa366682c88c90c
+      internalID: 776596091
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: setter_time_scale_1
+      name: turret_selector_1
       rect:
         serializedVersion: 2
-        x: 529
-        y: 156
-        width: 93
-        height: 177
+        x: 547
+        y: 36
+        width: 33
+        height: 429
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -171,20 +171,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5522480d48c54c74182a505ce8ebf08b
-      internalID: 1411258526
+      spriteID: b063b9322ade1654b9d9d8f94d854f21
+      internalID: -2121319298
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: setter_time_scale_2
+      name: turret_selector_2
       rect:
         serializedVersion: 2
-        x: 687
-        y: 168
-        width: 90
-        height: 163
+        x: 652
+        y: 236
+        width: 62
+        height: 63
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -192,20 +192,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aad3abf34e09de147ba638696646a06d
-      internalID: 553062397
+      spriteID: 20d4951c95a1a1d448efda2acfd6cc78
+      internalID: -1655401093
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: setter_time_scale_3
+      name: turret_selector_3
       rect:
         serializedVersion: 2
-        x: 831
-        y: 156
-        width: 109
-        height: 183
+        x: 827
+        y: 142
+        width: 226
+        height: 229
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -213,8 +213,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: de1db31dcceb5894e839b2e26cccb671
-      internalID: -1019883931
+      spriteID: 5928770c487eab145b090454a3cca41a
+      internalID: 413397870
       vertices: []
       indices: 
       edges: []
@@ -222,7 +222,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: cf745d20494c46b42ad598e8713d608e
+    spriteID: 9a89d06f4d8f0a147a994c2687412b27
     internalID: 0
     vertices: []
     indices: 
@@ -230,10 +230,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      setter_time_scale_0: -1103726042
-      setter_time_scale_1: 1411258526
-      setter_time_scale_2: 553062397
-      setter_time_scale_3: -1019883931
+      turret_selector_0: 776596091
+      turret_selector_1: -2121319298
+      turret_selector_2: -1655401093
+      turret_selector_3: 413397870
   mipmapLimitGroupName: 
   pSDRemoveMatte: 1
   userData: 

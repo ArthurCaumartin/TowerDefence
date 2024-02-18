@@ -24,6 +24,8 @@ public class TurretShooter : MonoBehaviour
         if(!_target) //TODO faire un check de la distance pour clear la target
             return;
 
+
+
         if(_target != _lastFrameTarget)
             _shootTimer = 0;
 
