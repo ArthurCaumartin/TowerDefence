@@ -14,6 +14,11 @@ public class CanvasManager : MonoBehaviour
         instance = this;
     }
 
+    void Start()
+    {
+        SetTimeScaleUI(1);
+    }
+
     public void SetTimeScaleUI(int index)
     {
         if(index > 3)

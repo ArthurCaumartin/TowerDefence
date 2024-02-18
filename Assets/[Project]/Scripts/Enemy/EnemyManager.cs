@@ -67,4 +67,10 @@ public class EnemyManager : MonoBehaviour
             _ennemyList.Remove(toRemove);
         Destroy(toRemove);
     }
+
+    protected void OnGUI()
+    {
+        GUI.skin.label.fontSize = Screen.width / 40;
+        GUILayout.Label("Current enemy number : " + _ennemyList.Count);
+    }
 }

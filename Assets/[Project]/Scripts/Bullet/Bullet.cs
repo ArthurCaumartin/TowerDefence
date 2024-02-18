@@ -34,7 +34,7 @@ public class Bullet : MonoBehaviour
             Destroy(gameObject);
             return;
         }
-        transform.position = Vector2.Lerp(_startPosition, _target.transform.position, Time.deltaTime / _bulletSpeed);
-        // transform.position = Vector3.MoveTowards(transform.position, _target.transform.position, _bulletSpeed * Time.deltaTime);
+        // transform.position = Vector2.Lerp(_startPosition, _target.transform.position, Time.deltaTime / _bulletSpeed);
+        transform.position = Vector3.MoveTowards(transform.position, _target.transform.position, _bulletSpeed * Time.deltaTime);
     }
 }
