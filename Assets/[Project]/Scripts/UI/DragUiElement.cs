@@ -9,6 +9,7 @@ public class DragUiElement : MonoBehaviour, IPointerDownHandler, IPointerMoveHan
     private bool _isDrag = false;
     private Vector2 _dragDelta;
     private Vector2 _lastFramePosition;
+
     public void OnPointerDown(PointerEventData eventData)
     {
         _isDrag = true;
