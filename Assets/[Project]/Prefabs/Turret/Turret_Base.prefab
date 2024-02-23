@@ -50,7 +50,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _baseDamage: 2
-  _baseAttackPerSecond: 25
+  _baseAttackPerSecond: 3
   _baseRange: 4
   _baseBulletSpeed: 15
 --- !u!114 &3362559001974992659

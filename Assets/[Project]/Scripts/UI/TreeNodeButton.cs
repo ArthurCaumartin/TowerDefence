@@ -1,9 +1,10 @@
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class TreeNodeButton : MonoBehaviour, IPointerDownHandler
+public class TreeNodeButton : MonoBehaviour, IPointerDownHandler , IPointerEnterHandler , IPointerMoveHandler , IPointerExitHandler
 {
     [SerializeField] private bool _isFirstNode = false;
     [Space]
@@ -16,9 +17,13 @@ public class TreeNodeButton : MonoBehaviour, IPointerDownHandler
 
     public bool IsOn { get => _isSelected; }
     public TreeNodeButton AddNode { set => _connectedNodesList.Add(value); }
+    private TreeNodeModifier _treeNodeModifier;
+    private TextMeshProUGUI _hoverText;
 
     void Start()
     {
+        _treeNodeModifier = GetComponent<TreeNodeModifier>();
+        _hoverText = GetComponentInChildren<TextMeshProUGUI>();
         SetColor();
     }
 
@@ -27,17 +32,11 @@ public class TreeNodeButton : MonoBehaviour, IPointerDownHandler
         SetColor();
     }
 
-    public void OnPointerDown(PointerEventData eventData)
+    public void OnClic()
     {
         print("Clic on node");
         if(CanBeClic() ==  false)
             return;
-
-        // if (_upTreeNode.Count != 0 && CheckUp() == false)
-        //     return;
-
-        // if (_underTreeNode.Count != 0 && CheckUnder() == false)
-        //     return;
 
         _isSelected = !_isSelected;
         SetColor();
@@ -48,18 +47,13 @@ public class TreeNodeButton : MonoBehaviour, IPointerDownHandler
         // print("Call CanBeClic() on " + name);
         if(_connectedNodesList.Count == 0)
             return false;
-        
 
         foreach (var item in _connectedNodesList)
         {
             if(item.IsOn)
             {
                 if(_isFirstNode)
-                {
-                    // print("Im first node");
                     return false;
-                }
-
                 return true;
             }
         }
@@ -81,5 +75,42 @@ public class TreeNodeButton : MonoBehaviour, IPointerDownHandler
             foreach (var item in _linkImagesList)
                 item.color = _unSelectColor;
         }
+    }
+
+    public void SetHoverText(string text, bool activeValue)
+    {
+        _hoverText.text = text;
+        _hoverText.enabled = activeValue;
+    }
+
+    public void MoveHoverText(Vector2 position)
+    {
+        if(!_hoverText.gameObject.activeSelf)
+            return;
+        RectTransform rect = (RectTransform)_hoverText.transform;
+        rect.rotation = Quaternion.identity;
+        rect.position = position;
+    }
+
+    public void OnPointerDown(PointerEventData eventData)
+    {
+        OnClic();
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        print("Enter ! " + name);
+        SetHoverText(_treeNodeModifier.GetDescription(), true);
+    }
+
+    public void OnPointerMove(PointerEventData eventData)
+    {
+        // print("Move ! " + name);
+        MoveHoverText(eventData.position);
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        SetHoverText("", false);
     }
 }

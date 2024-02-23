@@ -33,7 +33,7 @@ public class TreeNodeModifier : MonoBehaviour
             {
                 _description += item.multiplier.ToString()
                 + " " + item.statType.ToString()
-                + " by " + item.value.ToString();
+                + " by " + item.value.ToString() + "%";
             }
 
             if (item.multiplier == Multiplier.More)
@@ -45,5 +45,10 @@ public class TreeNodeModifier : MonoBehaviour
 
             _description += "\r\n";
         }
+    }
+
+    public  string GetDescription()
+    {
+        return _description;
     }
 }

@@ -76,9 +76,9 @@ public class EnemyManager : MonoBehaviour
         _canSpawn = true;
     }
 
-    // protected void OnGUI()
-    // {
-    //     GUI.skin.label.fontSize = Screen.width / 40;
-    //     GUILayout.Label("Current enemy number : " + _ennemyList.Count);
-    // }
+    protected void OnGUI()
+    {
+        GUI.skin.label.fontSize = Screen.width / 40;
+        GUILayout.Label("Current enemy number : " + _ennemyList.Count);
+    }
 }

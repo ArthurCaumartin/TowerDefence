@@ -1290,6 +1290,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 8917114682438745894, guid: c374010a8d91bdd45a4d1f45b378cd8d,
+        type: 3}
+      propertyPath: _spawnPerSecond
+      value: 2.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1353,10 +1358,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4139770736741854016, guid: 38dc6967499cb4a4089e840a627f8657,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7725374247578573805, guid: 38dc6967499cb4a4089e840a627f8657,
         type: 3}
       propertyPath: m_Name
       value: Level Points
+      objectReference: {fileID: 0}
+    - target: {fileID: 8166027499122323455, guid: 38dc6967499cb4a4089e840a627f8657,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
