@@ -12,6 +12,7 @@ public enum StatType
     Damage,
     AttackSpeed,
     Range,
+    BulletSpeed,
 }
 
 [Serializable]

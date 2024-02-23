@@ -32,11 +32,11 @@ public class TurretAim : MonoBehaviour
         switch (_aimMode)
         {
             case AimMode.First:
-                enemyToReturn = EnemyManager.instance.GetFirstEnemyInRange(transform.position, _stat._baseRange);
+                enemyToReturn = EnemyManager.instance.GetFirstEnemyInRange(transform.position, _stat.Range);
                 break;
 
             case AimMode.Random:
-                enemyToReturn = EnemyManager.instance.GetRandomEnemyInRange(transform.position, _stat._baseRange);
+                enemyToReturn = EnemyManager.instance.GetRandomEnemyInRange(transform.position, _stat.Range);
                 break;
         }
 
@@ -55,7 +55,7 @@ public class TurretAim : MonoBehaviour
             return;
         }
 
-        if (Vector2.Distance(transform.position, _enemyTarget.transform.position) > _stat._baseRange)
+        if (Vector2.Distance(transform.position, _enemyTarget.transform.position) > _stat.Range)
         {
             _enemyTarget = null;
             return;
@@ -82,6 +82,6 @@ public class TurretAim : MonoBehaviour
             _stat = GetComponent<TurretStat>();
 
         Gizmos.color = new Color(1, 0, 0, .2f);
-        Gizmos.DrawSphere(transform.position, _stat._baseRange);
+        Gizmos.DrawSphere(transform.position, _stat.Range);
     }
 }

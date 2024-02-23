@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
+    //TODO referencer turret stat pour que les stat des bullet sois dynamique
     [SerializeField] private EnemyLife _target;
     [SerializeField] private float _bulletSpeed;
     [SerializeField] private float _bulletDamage;

@@ -723,6 +723,23 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree_Node (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: _description
+      value: 'Increased BulletSpeed by 1000%
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: statModifierList.Array.data[0].value
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: statModifierList.Array.data[0].statType
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3469671305932627700, guid: 38f0f1b647865b6478d398f6efa64198,
         type: 3}
       propertyPath: m_Pivot.x

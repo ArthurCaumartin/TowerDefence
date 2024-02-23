@@ -18,13 +18,20 @@ public class TreeNodeButton : MonoBehaviour, IPointerDownHandler , IPointerEnter
     public bool IsOn { get => _isSelected; }
     public TreeNodeButton AddNode { set => _connectedNodesList.Add(value); }
     private TreeNodeModifier _treeNodeModifier;
+    private CanvasTree _canvasTree;
     private TextMeshProUGUI _hoverText;
 
     void Start()
     {
+        _canvasTree = GetComponentInParent<CanvasTree>();
         _treeNodeModifier = GetComponent<TreeNodeModifier>();
         _hoverText = GetComponentInChildren<TextMeshProUGUI>();
         SetColor();
+
+        foreach (var item in _linkImagesList)
+        {
+            // item.GetComponent<Image>().Sent
+        }
     }
 
     void OnValidate()
@@ -34,11 +41,16 @@ public class TreeNodeButton : MonoBehaviour, IPointerDownHandler , IPointerEnter
 
     public void OnClic()
     {
-        print("Clic on node");
+        // print("Clic on node");
         if(CanBeClic() ==  false)
             return;
-
         _isSelected = !_isSelected;
+
+        if(_isSelected)
+            _canvasTree.AddSelectNode(_treeNodeModifier);
+        else
+            _canvasTree.RemoveSelectedNode(_treeNodeModifier);
+            
         SetColor();
     }
 
@@ -99,7 +111,7 @@ public class TreeNodeButton : MonoBehaviour, IPointerDownHandler , IPointerEnter
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        print("Enter ! " + name);
+        // print("Enter ! " + name);
         SetHoverText(_treeNodeModifier.GetDescription(), true);
     }
 

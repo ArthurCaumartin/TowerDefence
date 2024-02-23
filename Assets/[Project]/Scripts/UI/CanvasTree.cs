@@ -6,15 +6,39 @@ public class CanvasTree : MonoBehaviour
 {
     [SerializeField] private RectTransform _dragableContent;
     [SerializeField] private List<TreeNodeButton> _nodeList = new List<TreeNodeButton>();
+    private List<TreeNodeModifier> _selectedNodeList = new List<TreeNodeModifier>();
     private Canvas _canvas;
     private TurretManager _turretManager;
     private bool _isNodeConnected;
+    private TurretStat _turretStat;
 
     void Start()
     {
         _canvas = GetComponent<Canvas>();
+        _turretStat = GetComponentInParent<TurretStat>();
+        
+        GetAllChildNode();
+    }
 
-        GetChildNode();
+    public void AddSelectNode(TreeNodeModifier node)
+    {
+        if (!_selectedNodeList.Contains(node))
+            _selectedNodeList.Add(node);
+            
+        OnTreeChange();
+    }
+
+    public void RemoveSelectedNode(TreeNodeModifier node)
+    {
+        if (_selectedNodeList.Contains(node))
+            _selectedNodeList.Remove(node);
+
+        OnTreeChange();
+    }
+
+    private void OnTreeChange()
+    {
+        _turretStat.BakeTurret(_selectedNodeList);
     }
 
     public void OpenCanvas()
@@ -35,7 +59,7 @@ public class CanvasTree : MonoBehaviour
         _turretManager.OnCloseTurretTree();
     }
 
-    private void GetChildNode()
+    private void GetAllChildNode()
     {
         _nodeList.Clear();
         foreach (var item in GetComponentsInChildren<TreeNodeButton>())

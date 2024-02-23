@@ -29,7 +29,7 @@ public class TurretShooter : MonoBehaviour
         if(_target != _lastFrameTarget)
             _shootTimer = 0;
 
-        _shootTimer += Time.deltaTime * _stat._baseAttackPerSecond;
+        _shootTimer += Time.deltaTime * _stat.AttackSpeed;
         if (_shootTimer >= 1)
         {
             _shootTimer = 0;
@@ -38,7 +38,7 @@ public class TurretShooter : MonoBehaviour
 
             Bullet newbullet = Instantiate(_bulletPrefab, bulletSpawn, Quaternion.identity)
                                .GetComponent<Bullet>();
-            newbullet.Initialize(_target, _stat._baseDamage, _stat._baseBulletSpeed);
+            newbullet.Initialize(_target, _stat.Damage, _stat.BulletSpeed);
         }
 
         _lastFrameTarget = _target;
