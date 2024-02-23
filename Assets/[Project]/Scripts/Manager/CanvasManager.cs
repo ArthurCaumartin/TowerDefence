@@ -22,7 +22,7 @@ public class CanvasManager : MonoBehaviour
     {
         if(index > 3)
         {
-            Debug.LogWarning("Time Scale index to hight !!!");
+            // Debug.LogWarning("Time Scale index to hight !!!");
             return;
         }
         foreach (var item in _scaleImageLsit)

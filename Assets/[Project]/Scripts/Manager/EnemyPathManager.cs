@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
-public class LevelManager : MonoBehaviour
+public class EnemyPathManager : MonoBehaviour
 {
-    public static LevelManager instance;
+    public static EnemyPathManager instance;
     [SerializeField] private float _debugGizmoThicknes = 1f;
     [SerializeField] private bool _debug;
     [SerializeField] private List<Transform> _positionList;

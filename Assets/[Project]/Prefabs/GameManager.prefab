@@ -48,6 +48,50 @@ MonoBehaviour:
     type: 3}
   _spawnPerSecond: 5
   _ennemyList: []
+--- !u!1 &6606522959394459346
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2127233857344585602}
+  - component: {fileID: 3490824054449980058}
+  m_Layer: 0
+  m_Name: TurretManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2127233857344585602
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6606522959394459346}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7563826307643510314}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3490824054449980058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6606522959394459346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d13454e6d6a7e3419c541b5a6d55a1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7596360126601876666
 GameObject:
   m_ObjectHideFlags: 0
@@ -57,8 +101,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7563826307643510314}
+  - component: {fileID: 6135690348019768106}
   - component: {fileID: 400117374906870446}
-  - component: {fileID: 5171983020782713899}
   - component: {fileID: 6628148843609405386}
   m_Layer: 0
   m_Name: GameManager
@@ -81,8 +125,22 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8025085101703811367}
+  - {fileID: 2127233857344585602}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6135690348019768106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7596360126601876666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10271975098f1d146aa821010ebdabc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _enemyManager: {fileID: 0}
 --- !u!114 &400117374906870446
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -114,18 +172,6 @@ MonoBehaviour:
   m_DefaultActionMap: BaseMap
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &5171983020782713899
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7596360126601876666}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 10271975098f1d146aa821010ebdabc7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &6628148843609405386
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -138,8 +184,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bd5cd40d17ff294192b4e931fe51c0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _turretManager: {fileID: 3490824054449980058}
   _tileMap: {fileID: 0}
-  _turretSelector: {fileID: 0}
-  _turretPrefab: {fileID: 3402711449188018374, guid: dff91d63c843b61499a92854fa419ff3,
+  _selectedElement: {fileID: 3402711449188018374, guid: dff91d63c843b61499a92854fa419ff3,
     type: 3}
   _turretSlotTile: {fileID: 11400000, guid: 0d455e27164b3a149aa311b70d18030f, type: 2}

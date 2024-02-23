@@ -7,6 +7,7 @@ public class EnemyManager : MonoBehaviour
     [SerializeField] private GameObject _ennemyPrefab;
     [SerializeField] private float _spawnPerSecond;
     [SerializeField] private List<GameObject> _ennemyList;
+    private bool _canSpawn = false;
     private float _timer;
 
     void Awake()
@@ -17,12 +18,15 @@ public class EnemyManager : MonoBehaviour
     [ContextMenu("Spawn Ennemy")]
     public void SpawnEnnemy()
     {
-        GameObject newEnnemy = Instantiate(_ennemyPrefab, LevelManager.instance.PositionList[0].position, Quaternion.identity);
+        GameObject newEnnemy = Instantiate(_ennemyPrefab, EnemyPathManager.instance.PositionList[0].position, Quaternion.identity);
         _ennemyList.Add(newEnnemy);
     }
 
     void Update()
     {
+        if(!_canSpawn)
+            return;
+
         _timer += Time.deltaTime * _spawnPerSecond;
         if (_timer > 1)
         {
@@ -67,9 +71,14 @@ public class EnemyManager : MonoBehaviour
         Destroy(toRemove);
     }
 
-    protected void OnGUI()
+    public void StartSpawning()
     {
-        GUI.skin.label.fontSize = Screen.width / 40;
-        GUILayout.Label("Current enemy number : " + _ennemyList.Count);
+        _canSpawn = true;
     }
+
+    // protected void OnGUI()
+    // {
+    //     GUI.skin.label.fontSize = Screen.width / 40;
+    //     GUILayout.Label("Current enemy number : " + _ennemyList.Count);
+    // }
 }

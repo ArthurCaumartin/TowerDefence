@@ -1,11 +1,15 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.Tilemaps;
 
 public class TileMapInteract : MonoBehaviour
 {
+    [Header("Managers :")]
+    [SerializeField] private TurretManager _turretManager;
+    [Header("TileMap")]
     [SerializeField] private Tilemap _tileMap;
-    [SerializeField] private GameObject _selectedElement;
     [Space]
+    [SerializeField] private GameObject _selectedElement; //TODO ui + methode pour set l'item
     [SerializeField] private Tile _turretSlotTile;
     private Tile _tileUnderMouse;
     private Vector3 _worldMousePos;
@@ -14,6 +18,7 @@ public class TileMapInteract : MonoBehaviour
     private void Start()
     {
         _mainCamera = Camera.main;
+        _turretManager = GetComponentInChildren<TurretManager>();
     }
 
     private void Update()
@@ -22,17 +27,19 @@ public class TileMapInteract : MonoBehaviour
         _tileUnderMouse = (Tile)_tileMap.GetTile(_tileMap.WorldToCell(_worldMousePos));
     }
 
-    private void OnTurretSlotClic()
-    {
-        GameManager.instance.PlaceElement(_selectedElement, _tileMap.WorldToCell(_worldMousePos));
-    }
-
     private void OnMouseLeft()
     {
+        // print("Input");
         if (!_tileUnderMouse)
             return;
-
+        // print("Baouaouaoua");
         if (_tileUnderMouse == _turretSlotTile)
             OnTurretSlotClic();
+    }
+
+    private void OnTurretSlotClic()
+    {
+        // print("Clic on slot");
+        _turretManager.OnClicTurretSlot(_selectedElement, _tileMap.WorldToCell(_worldMousePos));
     }
 }

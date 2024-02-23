@@ -548,11 +548,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas Turret Tree
       objectReference: {fileID: 0}
-    - target: {fileID: 5179925831770123446, guid: 4ae2c896d009d4d47bf481961b79abda,
-        type: 3}
-      propertyPath: m_AdditionalShaderChannelsFlag
-      value: 25
-      objectReference: {fileID: 0}
     - target: {fileID: 8585988277249026275, guid: 4ae2c896d009d4d47bf481961b79abda,
         type: 3}
       propertyPath: m_Pivot.x

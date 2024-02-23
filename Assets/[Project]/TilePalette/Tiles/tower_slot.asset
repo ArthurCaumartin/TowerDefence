@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: tower_socle
+  m_Name: tower_slot
   m_EditorClassIdentifier: 
   m_Sprite: {fileID: 21300000, guid: a07e31827d9b6e54d8e8ba5b62840e64, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

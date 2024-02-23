@@ -19,4 +19,5 @@ public class StatModifier
 {
     public StatType statType;
     public Multiplier multiplier;
+    public float value;
 }

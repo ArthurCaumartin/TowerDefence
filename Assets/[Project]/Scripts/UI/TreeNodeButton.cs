@@ -3,19 +3,19 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class TreeNode : MonoBehaviour, IPointerDownHandler
+public class TreeNodeButton : MonoBehaviour, IPointerDownHandler
 {
     [SerializeField] private bool _isFirstNode = false;
-    [SerializeField] private List<TreeNode> _connectedNodesList;
     [Space]
     [SerializeField] private Color _selectColor = Color.yellow;
     [SerializeField] private Color _unSelectColor = Color.gray;
     [SerializeField] private Image _images;
+    [SerializeField] private List<TreeNodeButton> _connectedNodesList = new List<TreeNodeButton>();
     [SerializeField] private List<Image> _linkImagesList;
     public bool _isSelected = false;
 
     public bool IsOn { get => _isSelected; }
-    public TreeNode AddNode { set => _connectedNodesList.Add(value); }
+    public TreeNodeButton AddNode { set => _connectedNodesList.Add(value); }
 
     void Start()
     {
@@ -29,6 +29,7 @@ public class TreeNode : MonoBehaviour, IPointerDownHandler
 
     public void OnPointerDown(PointerEventData eventData)
     {
+        print("Clic on node");
         if(CanBeClic() ==  false)
             return;
 
@@ -44,7 +45,7 @@ public class TreeNode : MonoBehaviour, IPointerDownHandler
 
     private bool CanBeClic()
     {
-        print("Call CanBeClic() on " + name);
+        // print("Call CanBeClic() on " + name);
         if(_connectedNodesList.Count == 0)
             return false;
         
@@ -55,7 +56,7 @@ public class TreeNode : MonoBehaviour, IPointerDownHandler
             {
                 if(_isFirstNode)
                 {
-                    print("Im first node");
+                    // print("Im first node");
                     return false;
                 }
 
