@@ -24,30 +24,38 @@ public class TreeNodeModifier : MonoBehaviour
             _description = "";
             return;
         }
-        
+
         _description = "";
 
         foreach (StatModifier item in statModifierList)
         {
             if (item.multiplier == Multiplier.Increased)
             {
-                _description += item.multiplier.ToString()
-                + " " + item.statType.ToString()
+                if (item.value < 0)
+                    _description += "Decreased";
+                else
+                    _description += item.multiplier.ToString();
+                
+                _description += " " + item.statType.ToString()
                 + " by " + item.value.ToString() + "%";
             }
 
             if (item.multiplier == Multiplier.More)
             {
-                _description += item.value.ToString() + "%"
-                + " " + item.multiplier.ToString()
-                + " " + item.statType.ToString();
+                _description += item.value.ToString() + "%" + " ";
+                if(item.value < 0)
+                    _description += "Less";
+                else
+                    _description += item.multiplier.ToString();
+
+                _description += " " + item.statType.ToString();
             }
 
             _description += "\r\n";
         }
     }
 
-    public  string GetDescription()
+    public string GetDescription()
     {
         return _description;
     }

@@ -480,7 +480,7 @@ PrefabInstance:
       propertyPath: _description
       value: 'Increased AttackSpeed by 30%
 
-        -5% More Range
+        -5% Less Range
 
 '
       objectReference: {fileID: 0}
@@ -1120,7 +1120,7 @@ PrefabInstance:
     - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
         type: 3}
       propertyPath: _description
-      value: '-50% More AttackSpeed
+      value: '-50% Less AttackSpeed
 
         300% More BulletSpeed
 
@@ -2961,7 +2961,7 @@ PrefabInstance:
     - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
         type: 3}
       propertyPath: _description
-      value: '-50% More Damage
+      value: '-50% Less Damage
 
         50% More BulletSpeed
 
@@ -3430,7 +3430,7 @@ PrefabInstance:
       propertyPath: _description
       value: 'Increased AttackSpeed by 30%
 
-        -5% More Range
+        -5% Less Range
 
 '
       objectReference: {fileID: 0}
@@ -3733,8 +3733,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
         type: 3}
+      propertyPath: statModifierList.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
       propertyPath: statModifierList.Array.data[0].value
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: statModifierList.Array.data[1].value
+      value: 32.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: statModifierList.Array.data[1].statType
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: statModifierList.Array.data[1].multiplier
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3469671305932627700, guid: 38f0f1b647865b6478d398f6efa64198,
         type: 3}
@@ -3865,7 +3885,7 @@ PrefabInstance:
       propertyPath: _description
       value: 'Increased AttackSpeed by 30%
 
-        -5% More Range
+        -5% Less Range
 
 '
       objectReference: {fileID: 0}
