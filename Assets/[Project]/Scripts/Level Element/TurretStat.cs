@@ -25,7 +25,7 @@ public class TurretStat : MonoBehaviour
     [SerializeField] private float _rangeMore = 1;
     public float Range { get => _rangeBase * _rangeIncreased * _rangeMore; }
     [Space]
-    [SerializeField] private float _bulletSpeedBase = 5;
+    [SerializeField] private float _bulletSpeedBase = 10;
     [SerializeField] private float _bulletSpeedIncreased = 1;
     [SerializeField] private float _bulletSpeedMore = 1;
     public float BulletSpeed { get => _bulletSpeedBase * _bulletSpeedIncreased * _bulletSpeedMore; }

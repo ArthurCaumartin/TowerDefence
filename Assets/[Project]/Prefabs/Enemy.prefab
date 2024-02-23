@@ -246,7 +246,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7e55af91c53f2d40bba683a8fbb55f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxLife: 50
+  _maxLife: 40
   _currentLife: 0
   _lifeBarImage: {fileID: 577458515375837931}
 --- !u!1 &4987322917569996142

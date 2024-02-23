@@ -49,14 +49,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67b105849d77fb040ac0e79423b8237a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _damageBase: 5
-  _damageMultiplier: 1
+  _critChanceBase: 0.05
+  _critMultiplierBase: 0.05
+  _damageBase: 10
+  _damageIncreased: 1
+  _damageMore: 1
   _attackSpeedBase: 5
-  _attackSpeedMultiplier: 1
+  _attackIncreasedSpeed: 1
+  _attackSpeedMore: 1
   _rangeBase: 5
-  _rangeMultiplier: 1
-  _bulletSpeedBase: 5
-  _bulletSpeedMultiplier: 1
+  _rangeIncreased: 1
+  _rangeMore: 1
+  _bulletSpeedBase: 10
+  _bulletSpeedIncreased: 1
+  _bulletSpeedMore: 1
 --- !u!114 &3362559001974992659
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -70,7 +76,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _spriteTransform: {fileID: 7863982615885735275}
-  _aimMode: 1
+  _aimMode: 0
   _debug: 1
 --- !u!114 &5538043691669903632
 MonoBehaviour:

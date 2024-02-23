@@ -259,10 +259,10 @@ RectTransform:
   - {fileID: 2470476928439791277}
   m_Father: {fileID: 8585988277249026275}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.2}
-  m_AnchorMax: {x: 0.90000004, y: 0.9}
-  m_AnchoredPosition: {x: -0.00015258789, y: 0.00024414062}
-  m_SizeDelta: {x: -0.00033569, y: 0.00048828}
+  m_AnchorMin: {x: 0.6, y: 0.1}
+  m_AnchorMax: {x: 0.95, y: 0.9}
+  m_AnchoredPosition: {x: -0.00012207031, y: 0.00010681152}
+  m_SizeDelta: {x: -0.0002, y: 0.00027466}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1602655956951317538
 CanvasRenderer:
@@ -457,8 +457,8 @@ RectTransform:
   - {fileID: 7794250065580530119}
   m_Father: {fileID: 8691167651280695060}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -474,6 +474,45 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tree_Node (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: _description
+      value: 'Increased AttackSpeed by 30%
+
+        -5% More Range
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: statModifierList.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: statModifierList.Array.data[0].value
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: statModifierList.Array.data[1].value
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: statModifierList.Array.data[0].statType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: statModifierList.Array.data[1].statType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: statModifierList.Array.data[1].multiplier
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3469671305932627700, guid: 38f0f1b647865b6478d398f6efa64198,
         type: 3}
@@ -598,6 +637,40 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tree_Node (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: _description
+      value: 'Increased AttackSpeed by 30%
+
+        Increased Range by 15%
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: statModifierList.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: statModifierList.Array.data[0].value
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: statModifierList.Array.data[1].value
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: statModifierList.Array.data[0].statType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: statModifierList.Array.data[1].statType
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3469671305932627700, guid: 38f0f1b647865b6478d398f6efa64198,
         type: 3}
@@ -726,19 +799,36 @@ PrefabInstance:
     - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
         type: 3}
       propertyPath: _description
-      value: 'Increased BulletSpeed by 1000%
+      value: 'Increased Damage by 10%
+
+        Increased AttackSpeed by 10%
 
 '
       objectReference: {fileID: 0}
     - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
         type: 3}
+      propertyPath: statModifierList.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
       propertyPath: statModifierList.Array.data[0].value
-      value: 1000
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: statModifierList.Array.data[1].value
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
         type: 3}
       propertyPath: statModifierList.Array.data[0].statType
-      value: 3
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: statModifierList.Array.data[1].statType
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3469671305932627700, guid: 38f0f1b647865b6478d398f6efa64198,
         type: 3}
@@ -864,6 +954,45 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree_Node (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: _description
+      value: '60% More Damage
+
+        Increased Range by 15%
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: statModifierList.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: statModifierList.Array.data[0].value
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: statModifierList.Array.data[1].value
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: statModifierList.Array.data[1].statType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: statModifierList.Array.data[0].multiplier
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: statModifierList.Array.data[1].multiplier
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3469671305932627700, guid: 38f0f1b647865b6478d398f6efa64198,
         type: 3}
       propertyPath: m_Pivot.x
@@ -987,6 +1116,50 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tree_Node (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: _description
+      value: '-50% More AttackSpeed
+
+        300% More BulletSpeed
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: statModifierList.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: statModifierList.Array.data[0].value
+      value: -50
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: statModifierList.Array.data[1].value
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: statModifierList.Array.data[0].statType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: statModifierList.Array.data[1].statType
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: statModifierList.Array.data[0].multiplier
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: statModifierList.Array.data[1].multiplier
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3469671305932627700, guid: 38f0f1b647865b6478d398f6efa64198,
         type: 3}
@@ -1112,6 +1285,35 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree_Node (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: _description
+      value: 'Increased Damage by 30%
+
+        Increased Range by 15%
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: statModifierList.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: statModifierList.Array.data[0].value
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: statModifierList.Array.data[1].value
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: statModifierList.Array.data[1].statType
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3469671305932627700, guid: 38f0f1b647865b6478d398f6efa64198,
         type: 3}
       propertyPath: m_Pivot.x
@@ -1235,6 +1437,18 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tree_Node (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: _description
+      value: 'Increased Damage by 15%
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: statModifierList.Array.data[0].value
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 3469671305932627700, guid: 38f0f1b647865b6478d398f6efa64198,
         type: 3}
@@ -1360,6 +1574,40 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree_Node (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: _description
+      value: 'Increased AttackSpeed by 30%
+
+        Increased Range by 15%
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: statModifierList.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: statModifierList.Array.data[0].value
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: statModifierList.Array.data[1].value
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: statModifierList.Array.data[0].statType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: statModifierList.Array.data[1].statType
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3469671305932627700, guid: 38f0f1b647865b6478d398f6efa64198,
         type: 3}
       propertyPath: m_Pivot.x
@@ -1483,6 +1731,40 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tree_Node (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: _description
+      value: 'Increased AttackSpeed by 30%
+
+        Increased Range by 15%
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: statModifierList.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: statModifierList.Array.data[0].value
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: statModifierList.Array.data[1].value
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: statModifierList.Array.data[0].statType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: statModifierList.Array.data[1].statType
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3469671305932627700, guid: 38f0f1b647865b6478d398f6efa64198,
         type: 3}
@@ -1608,6 +1890,23 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree_Node (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: _description
+      value: 'Increased AttackSpeed by 15%
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: statModifierList.Array.data[0].value
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: statModifierList.Array.data[0].statType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3469671305932627700, guid: 38f0f1b647865b6478d398f6efa64198,
         type: 3}
       propertyPath: m_Pivot.x
@@ -1731,6 +2030,45 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tree_Node (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: _description
+      value: '60% More Damage
+
+        Increased Range by 15%
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: statModifierList.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: statModifierList.Array.data[0].value
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: statModifierList.Array.data[1].value
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: statModifierList.Array.data[1].statType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: statModifierList.Array.data[0].multiplier
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: statModifierList.Array.data[1].multiplier
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3469671305932627700, guid: 38f0f1b647865b6478d398f6efa64198,
         type: 3}
@@ -1856,6 +2194,35 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree_Node (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: _description
+      value: 'Increased Damage by 30%
+
+        Increased Range by 15%
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: statModifierList.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: statModifierList.Array.data[0].value
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: statModifierList.Array.data[1].value
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: statModifierList.Array.data[1].statType
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3469671305932627700, guid: 38f0f1b647865b6478d398f6efa64198,
         type: 3}
       propertyPath: m_Pivot.x
@@ -1980,6 +2347,35 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree_Node (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: _description
+      value: 'Increased Damage by 10%
+
+        Increased AttackSpeed by 10%
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: statModifierList.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: statModifierList.Array.data[0].value
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: statModifierList.Array.data[1].value
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: statModifierList.Array.data[1].statType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3469671305932627700, guid: 38f0f1b647865b6478d398f6efa64198,
         type: 3}
       propertyPath: m_Pivot.x
@@ -2103,6 +2499,40 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tree_Node (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: _description
+      value: 'Increased AttackSpeed by 30%
+
+        Increased Range by 15%
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: statModifierList.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: statModifierList.Array.data[0].value
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: statModifierList.Array.data[1].value
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: statModifierList.Array.data[0].statType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: statModifierList.Array.data[1].statType
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3469671305932627700, guid: 38f0f1b647865b6478d398f6efa64198,
         type: 3}
@@ -2392,6 +2822,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree_Node (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: _description
+      value: 'Increased Damage by 30%
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: statModifierList.Array.data[0].value
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 3469671305932627700, guid: 38f0f1b647865b6478d398f6efa64198,
         type: 3}
       propertyPath: m_Pivot.x
@@ -2515,6 +2957,45 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tree_Node (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: _description
+      value: '-50% More Damage
+
+        50% More BulletSpeed
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: statModifierList.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: statModifierList.Array.data[0].value
+      value: -50
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: statModifierList.Array.data[1].value
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: statModifierList.Array.data[1].statType
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: statModifierList.Array.data[0].multiplier
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: statModifierList.Array.data[1].multiplier
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3469671305932627700, guid: 38f0f1b647865b6478d398f6efa64198,
         type: 3}
@@ -2640,6 +3121,45 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree_Node (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: _description
+      value: '60% More Damage
+
+        Increased Range by 15%
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: statModifierList.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: statModifierList.Array.data[0].value
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: statModifierList.Array.data[1].value
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: statModifierList.Array.data[1].statType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: statModifierList.Array.data[0].multiplier
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: statModifierList.Array.data[1].multiplier
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3469671305932627700, guid: 38f0f1b647865b6478d398f6efa64198,
         type: 3}
       propertyPath: m_Pivot.x
@@ -2763,6 +3283,23 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tree_Node (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: _description
+      value: 'Increased AttackSpeed by 20%
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: statModifierList.Array.data[0].value
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: statModifierList.Array.data[0].statType
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3469671305932627700, guid: 38f0f1b647865b6478d398f6efa64198,
         type: 3}
@@ -2888,6 +3425,45 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree_Node (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: _description
+      value: 'Increased AttackSpeed by 30%
+
+        -5% More Range
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: statModifierList.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: statModifierList.Array.data[0].value
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: statModifierList.Array.data[1].value
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: statModifierList.Array.data[0].statType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: statModifierList.Array.data[1].statType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: statModifierList.Array.data[1].multiplier
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3469671305932627700, guid: 38f0f1b647865b6478d398f6efa64198,
         type: 3}
       propertyPath: m_Pivot.x
@@ -3011,6 +3587,18 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tree_Node (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: _description
+      value: 'Increased Damage by 30%
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: statModifierList.Array.data[0].value
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 3469671305932627700, guid: 38f0f1b647865b6478d398f6efa64198,
         type: 3}
@@ -3136,6 +3724,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree_Node (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: _description
+      value: 'Increased Damage by 20%
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: statModifierList.Array.data[0].value
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 3469671305932627700, guid: 38f0f1b647865b6478d398f6efa64198,
         type: 3}
       propertyPath: m_Pivot.x
@@ -3259,6 +3859,45 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tree_Node (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: _description
+      value: 'Increased AttackSpeed by 30%
+
+        -5% More Range
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: statModifierList.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: statModifierList.Array.data[0].value
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: statModifierList.Array.data[1].value
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: statModifierList.Array.data[0].statType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: statModifierList.Array.data[1].statType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953390628194246733, guid: 38f0f1b647865b6478d398f6efa64198,
+        type: 3}
+      propertyPath: statModifierList.Array.data[1].multiplier
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3469671305932627700, guid: 38f0f1b647865b6478d398f6efa64198,
         type: 3}

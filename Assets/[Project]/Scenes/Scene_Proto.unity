@@ -1152,11 +1152,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1071999551}
-    - target: {fileID: 753770071583792561, guid: d8e9f3d5a06f4d04eb215a20f697bf2b,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SwitchTimeScale
-      objectReference: {fileID: 0}
     - target: {fileID: 1040664944823465404, guid: d8e9f3d5a06f4d04eb215a20f697bf2b,
         type: 3}
       propertyPath: m_Name
